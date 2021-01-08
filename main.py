@@ -35,22 +35,22 @@ def check_class(day):
     current_time = datetime.now().strftime("%H:%M")
 
     # if advisory
-    if current_time == "08:57" or current_time == "08:58"  or current_time == "08:59"  or current_time == "09:00" or current_time == "22:44":
+    if current_time == "08:58"  or current_time == "08:59"  or current_time == "09:00":
         current_class = 0
     else:
         # if first/fifth block
-        if current_time == "09:23" or current_time == "09:24" or current_time == "09:25" or current_time == "09:26":
+        if current_time == "09:24" or current_time == "09:25" or current_time == "09:26":
             current_class = 1
         else:
             # if second/sixth block
-            if current_time == "10:51" or current_time == "10:52" or current_time == "10:53" or current_time == "10:54":
+            if current_time == "10:52" or current_time == "10:53" or current_time == "10:54":
                 current_class = 2
             else:
                 # if third/seventh block
-                if current_time == "13:04" or current_time == "13:05" or current_time == "13:06" or current_time == "13:07":
+                if current_time == "13:05" or current_time == "13:06" or current_time == "13:07":
                     current_class = 3
                 else:
-                    if current_time == "14:32" or current_time == "14:33" or current_time == "14:34" or current_time == "14:35":
+                    if current_time == "14:33" or current_time == "14:34" or current_time == "14:35":
                         current_class = 4
                     else:
                         # no class right now
@@ -109,22 +109,18 @@ if __name__ == "__main__":
         open_class(meet_url)
         if current_class == 0:
             print('ADVISORY is right now..')
-            time.sleep(1500)
+            time.sleep(1200)
         elif current_class == 1:
             print('FIRST class is right now..')
-            time.sleep(5400)
+            time.sleep(4800)
         elif current_class == 2:
             print('SECOND class is right now..')
-            time.sleep(5400)
+            time.sleep(4800)
         elif current_class == 3:
             print('THIRD class is right now..')
-            time.sleep(5400)
+            time.sleep(4800)
         elif current_class == 4:
             print('FOURTH class is right now..')
-            time.sleep(5400)
+            time.sleep(4800)
         else:
             print('this shouldnt run')
-
-
-    
-# py D:\CodeProjects\"VisualStudio repos"\AntiTardy\main.py
